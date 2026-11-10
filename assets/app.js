@@ -1,0 +1,2 @@
+function filterRows(input,id){const q=input.value.toLowerCase();document.querySelectorAll('#'+id+' tbody tr').forEach(row=>row.style.display=row.innerText.toLowerCase().includes(q)?'':'none')}
+function updateTotal(){let total=0;document.querySelectorAll('.qty').forEach(i=>{total+=(Number(i.value)||0)*(Number(i.dataset.price)||0)});const el=document.getElementById('sale-total');if(el)el.textContent='₱'+total.toLocaleString('en-PH',{minimumFractionDigits:2,maximumFractionDigits:2})}
